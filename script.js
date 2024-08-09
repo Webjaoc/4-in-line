@@ -101,4 +101,3 @@ document.querySelectorAll('.caja').forEach(caja => {
 
 // Añadir evento al botón de iniciar juego
 document.getElementById("startGame").addEventListener('click', startGame);
-
