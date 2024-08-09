@@ -1,6 +1,6 @@
 // Variables para almacenar los nombres de los jugadores
-var player1Name = "";
-var player2Name = "";
+let player1Name = "";
+let player2Name = "";
 
 // Variable para controlar el turno actual (true para player1, false para player2)
 let isPlayer1Turn = true;
