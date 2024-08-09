@@ -11,7 +11,8 @@ header{
 }
 .jugadores{
     display: flex;
-    width: 100%;
+    width: 300px;
+    margin: auto;
     justify-content: space-around;
     text-align: center;
     margin-top: 10px;
