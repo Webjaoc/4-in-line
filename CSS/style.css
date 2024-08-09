@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: azure;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+}
+.jugadores{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 10px;
+}
+.jugadores #player1{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+   
+}
+.jugadores #player2{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+   
+}
+.btn{
+    width: 100%;
+    text-align: center;
+}
+button{
+    width: 100px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+main{
+    margin-top: 30px;
+    display:grid ;
+    grid-template-columns: repeat(5, 70px);
+    grid-template-rows:repeat(4, 70px);
+    justify-content: center;
+    gap:0px;
+    
+}
+.caja{
+    margin: auto;
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border: 1px solid black;
+    
+}
+
+.letra{
+    color: transparent;
+    
+}
+.winner{
+    background-image: url(/ASSETS/IMAGES/ganador.jpg);
+    width: 70px;
+    height: 70px;
+    background-position: center;
+}
