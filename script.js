@@ -6,7 +6,7 @@ let player2Name = "";
 let isPlayer1Turn = true;
 
 // Array para almacenar el estado del tablero (inicialmente vacío)
-let board = Array(20).fill(null);
+let board = Array(25).fill(null);
 
 // Función para inicializar el juego
 function startGame() {
@@ -15,7 +15,7 @@ function startGame() {
     player2Name = document.getElementById("player2").value || "Jugador 2";
     
     // Reiniciar el tablero y el turno
-    board = Array(20).fill(null);
+    board = Array(25).fill(null);
     isPlayer1Turn = true;
     
     // Limpiar el tablero visualmente
@@ -50,33 +50,35 @@ function checkWinner() {
     // Definir las combinaciones ganadoras
     const winningCombinations = [
         // Filas
-        [0, 1, 2], [1, 2, 3], [2, 3, 4],
-        [5, 6, 7], [6, 7, 8], [7, 8, 9],
-        [10, 11, 12], [11, 12, 13], [12, 13, 14],
-        [15, 16, 17], [16, 17, 18], [17, 18, 19],
+        [0, 1, 2, 3], [1, 2, 3, 4],
+        [5, 6, 7, 8], [6, 7, 8, 9],
+        [10, 11, 12, 13], [11, 12, 13, 14],
+        [15, 16, 17, 18], [16, 17, 18, 19],
+        [20, 21, 22, 23], [21, 22, 23, 24], 
 
         // Columnas
-        [0, 5, 10], [5, 10, 15],
-        [1, 6, 11], [6, 11, 16],
-        [2, 7, 12], [7, 12, 17],
-        [3, 8, 13], [8, 13, 18],
-        [4, 9, 14], [9, 14, 19],
+        [0, 5, 10, 15], [5, 10, 15, 20],
+        [1, 6, 11, 16], [6, 11, 16, 21],
+        [2, 7, 12, 17], [7, 12, 17, 22],
+        [3, 8, 13, 18], [8, 13, 18, 23],
+        [4, 9, 14, 19], [9, 14, 19, 24],
 
         // Diagonales
-        [0, 6, 12], [1, 7, 13], [2, 8, 14], [5, 11, 17], [6, 12, 18], [7, 13, 19],
-        [2, 6, 10], [3, 7, 11], [4, 8, 12], [7, 11, 15], [8, 12, 16], [9, 13, 17]
+        [0, 6, 12, 18], [1, 7, 13, 19], [6, 12, 18, 24],
+        [3, 7, 11, 15], [4, 8, 12, 16], [8, 12, 16, 20], [9, 13, 17, 21]
     ];
     
     // Comprobar si alguna combinación ganadora está completa
     for (let combination of winningCombinations) {
-        const [a, b, c] = combination;  // Solo necesitamos tres índices
+        const [a, b, c, d] = combination;  // Solo necesitamos tres índices
         
-        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        if (board[a] && board[a] === board[b] && board[a] === board[c] && board[a] === board[d]) {
             // Pintar las casillas ganadoras del color correspondiente
             const winningColor = board[a] === "X" ? "blue" : "red";
             document.getElementById(a + 1).style.backgroundColor = winningColor;
             document.getElementById(b + 1).style.backgroundColor = winningColor;
             document.getElementById(c + 1).style.backgroundColor = winningColor;
+            document.getElementById(d + 1).style.backgroundColor = winningColor;
             // Dar un breve retraso antes de mostrar la alerta para que se vea el cambio de color
             setTimeout(() => {
                 // Anunciar al ganador
