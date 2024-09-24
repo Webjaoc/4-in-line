@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: azure;
+    background-color: rgb(139, 192, 192);
 }
 
 header{
     width: 100%;
     text-align: center;
+}
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .jugadores{
     display: flex;
