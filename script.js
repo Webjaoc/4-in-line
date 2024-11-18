@@ -84,7 +84,7 @@ function checkWinner() {
                 // Anunciar al ganador
                 alert(`¡${board[a] === "X" ? player1Name : player2Name} has ganado !`);
                 startGame(); // Reiniciar el juego
-            }, 200); // Retraso de 500ms para permitir la visualización del color
+            }, 200); // Retraso de 200ms para permitir la visualización del color
             return; // Salir de la función después de encontrar un ganador
         }
     }
